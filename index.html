@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevGate - Infraestructura para Videojuegos Indie</title>
+    <link rel="stylesheet" href="cuerpo.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
+    
+    <header>
+        <div class="portada">
+            <h1>DevGate: Infraestructura Indie</h1>
+            <p class="subtitulo-header">Consola de recursos y documentación técnica para desarrolladores de software UTM</p>
+        </div>
+    </header>
+
+    <nav aria-label="Principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="pedido.html">Solicitar Servidor</a>
+        <a href="contacto.html">Soporte Técnico</a>
+    </nav>
+
+    <main id="contenido" tabindex="-1">
+        <section id="importancia">
+            <h2>Ecosistema de Servidores y Herramientas</h2>
+            <p>Bienvenido a la plataforma centralizada de infraestructura interactiva. Aquí aprenderás a configurar arquitecturas de red estables, gestionar bases de datos estructuradas de jugadores y optimizar el rendimiento de entornos multijugador independientes.</p>
+            
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <div class="contenedor-img">
+                        <img src="imagenes/github2.jpeg" alt="Diagrama de control de versiones con un repositorio remoto en la nube" class="img-tarjeta">
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <h3>Control de Versiones</h3>
+                        <p>Gestión avanzada de repositorios en la nube para proteger, auditar y distribuir el código fuente de tu videojuego de forma colaborativa.</p>
+                        <a href="temas/comunicacion.html" class="btn-enlace">Ver guía de GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="contenedor-img">
+                        <img src="imagenes/imagen-2.jpg" alt="Maqueta de interfaz gráfica de usuario de videojuegos" class="img-tarjeta">
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <h3>Motores y Tiendas</h3>
+                        <p>Ecosistemas de desarrollo independientes libres de licencias comerciales y plataformas directas de distribución digital.</p>
+                        <a href="temas/innovacion.html" class="btn-enlace">Ver guía de Motores →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="contenedor-img">
+                        <img src="imagenes/tecnologia.jpg" alt=" centro de datos con hileras  de servidores iluminados con luces LED " class="img-tarjeta">
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <h3>Servidores Locales</h3>
+                        <p>Configuración de ambientes locales de bases de datos persistentes para el almacenamiento de perfiles e inventarios de usuarios.</p>
+                        <a href="temas/educacion.html" class="btn-enlace">Ver guía de Base de Datos →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        
+        <section id="problemas">
+            <h2>Preguntas Frecuentes de Infraestructura</h2>
+            <div class="acordeon">
+                <div class="item-acordeon">
+                    <h3>¿Cómo elijo un hosting para un servidor multijugador?</h3>
+                    <div class="panel" id="faq-1">
+                        <p>Para pruebas de concepto iniciales puedes optar por contenedores virtuales elásticos gratuitos como Skynode, pero para arquitecturas estables con usuarios recurrentes en producción se recomienda utilizar servidores dedicados con paneles avanzados como Searcade.</p>
+                    </div>
+                </div>
+
+                <div class="item-acordeon">
+                    <h3>¿Por qué utilizar Linux para desplegar las bases de datos del juego?</h3>
+                    <div class="panel" id="faq-2">
+                        <p>Las distribuciones empresariales como Fedora o Linux Mint ofrecen un consumo mínimo de recursos de hardware de cómputo, una estabilidad del núcleo superior y un control avanzado por comandos para levantar servicios SQL eficientemente.</p>
+                    </div>
+                </div>
+
+                <div class="item-acordeon">
+                    <h3>¿Cómo protejo el acceso remoto a la consola de comandos?</h3>
+                    <div class="panel" id="faq-3">
+                        <p>Es un estándar mandatorio configurar llaves criptográficas SSH (públicas y privadas) eliminando las contraseñas planas de la terminal, además de restringir los softwares de control visual de escritorio genéricos en redes públicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2026 DevGate UTM - Desarrollo Basado en Plataformas.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Servidor - DevGate</title>
+    <link rel="stylesheet" href="cuerpo.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
+
+    <header>
+        <div class="portada">
+            <h1>Asignación de Recursos</h1>
+        </div>
+    </header>
+
+    <nav aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="pedido.html" aria-current="page">Solicitar Servidor</a>
+        <a href="contacto.html">Soporte Técnico</a>
+    </nav>
+
+    <main id="contenido" tabindex="-1">
+        <section class="formulario-seccion">
+            <h2>Formulario de Reserva de Servidores de Pruebas</h2>
+            <p>Completa las especificaciones requeridas por tu grupo de desarrollo para asignarte un contenedor virtual aislado con recursos dedicados.</p>
+
+            <form id="formulario-pedido" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre del Lider de Proyecto:</label>
+                    <input type="text" id="nombre" name="nombre" required aria-describedby="error-nombre">
+                    <p class="error" id="error-nombre"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo Electrónico de Contacto:</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="error-correo">
+                    <p class="error" id="error-correo"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="motor">Entorno de Producción Requerido:</label>
+                    <select id="motor" name="motor" required aria-describedby="error-motor">
+                        <option value="">Seleccione una opción</option>
+                        <option value="godot">Entorno de Pruebas Godot Engine</option>
+                        <option value="unity">Servidor Multi-usuario Unity Indie</option>
+                        <option value="unreal">Ecosistema Dedicado Unreal Engine</option>
+                    </select>
+                    <p class="error" id="error-motor"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Especificaciones Adicionales de Hardware:</label>
+                    <textarea id="mensaje" name="mensaje" required aria-describedby="error-mensaje" placeholder="Ej. Requiere 2GB de RAM dedicada, almacenamiento SSD y sistema Fedora Linux..."></textarea>
+                    <p class="error" id="error-mensaje"></p>
+                </div>
+
+                <button type="submit">Enviar Solicitud de Servidor</button>
+            </form>
+            <div id="historial-registros" style="margin-top: 2rem; border-top: 1px dashed var(--bordes); padding-top: 1rem;"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p> 2026 DevGate UTM - Desarrollo Basado en Plataformas.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+

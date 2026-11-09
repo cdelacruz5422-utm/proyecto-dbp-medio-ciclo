@@ -1,0 +1,91 @@
+/* PALETA DE COLORES GAMING DE ALTO CONTRASTE (CUMPLE WCAG 2.2 AA) */
+:root {
+    --fondo-oscuro: #0f1115;       /* Fondo general inmersivo */
+    --fondo-tarjetas: #161920;     /* Fondo de contenedores y bloques */
+    --texto-brillante: #f0f3f6;    /* Texto principal ultra legible */
+    --texto-mutado: #959da5;       /* Texto secundario de soporte */
+    --neon-morado: #9d4edd;        /* Color de acento de marca principal */
+    --neon-azul: #3a86ff;          /* Color secundario eléctrico */
+    --alerta-rojo: #ff0054;        /* Alertas de error de formulario */
+    --foco-teclado: #ffb703;       /* Borde de foco obligatorio para teclado */
+    --bordes: #262c36;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-brillante);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+/* REGLA DEL BODY ACTUALIZADA CON IMAGEN DE FONDO ACCESIBLE */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--texto-brillante);
+    line-height: 1.6;
+    font-size: 1rem;
+    
+    /* TRUCO TÉCNICO: Superposición oscura (0.85) sobre la imagen de internet */
+    background-image: linear-gradient(
+        rgba(15, 17, 21, 0.85), 
+        rgba(15, 17, 21, 0.85)
+    ), url('imagenes/images.jpeg');
+    
+    /* Propiedades de ajuste elástico para que no se deforme */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-color: var(--fondo-oscuro); /* Respaldo si la imagen tarda en cargar */
+}
+
+
+/* ACCESIBILIDAD: ACCESO DIRECTO CON TECLADO */
+.salto {
+    position: absolute;
+    top: -120px;
+    left: 20px;
+    background: linear-gradient(90deg, var(--neon-morado), var(--neon-azul));
+    color: white;
+    padding: 12px 20px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: top 0.2s ease;
+}
+
+.salto:focus {
+    top: 20px;
+    outline: 3px solid var(--foco-teclado);
+}
+
+
+:focus {
+    outline: 3px solid var(--foco-teclado);
+    outline-offset: 4px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    color: var(--texto-brillante);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--neon-morado);
+    padding-left: 10px;
+}
+
+p {
+    color: var(--texto-mutado);
+    margin-bottom: 1.25rem;
+}
+

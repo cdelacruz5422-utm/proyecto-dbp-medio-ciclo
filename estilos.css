@@ -1,0 +1,243 @@
+
+header {
+    background: linear-gradient(135deg, #090a0d 0%, #161920 100%);
+    border-bottom: 1px solid var(--bordes);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    color: #e0aaff; 
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.subtitulo-header {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* MENÚ NAVEGACIÓN */
+nav {
+    background-color: #090a0d;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--neon-morado);
+}
+
+nav a {
+    color: var(--texto-brillante);
+    text-decoration: none;
+    padding: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 48px; 
+    transition: all 0.2s ease;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    background-color: var(--fondo-tarjetas);
+    color: var(--neon-azul);
+}
+
+/* CONTENEDOR CENTRAL DE LA INTERFAZ */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.tarjeta {
+    background-color: var(--fondo-tarjetas);
+    border: 1px solid var(--bordes);
+    border-radius: 8px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-azul);
+}
+
+/* AJUSTE DE LAS IMÁGENES DENTRO DE LAS TARJETAS */
+.contenedor-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #090a0d;
+    border-bottom: 1px solid var(--bordes);
+}
+
+.img-tarjeta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla de forma elástica */
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.tarjeta:hover .img-tarjeta {
+    opacity: 1;
+}
+
+.cuerpo-tarjeta {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cuerpo-tarjeta h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.btn-enlace, .btn-regresar {
+    color: var(--neon-azul);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 1rem;
+    display: inline-block;
+    min-height: 44px;
+}
+
+.btn-enlace:hover {
+    color: var(--neon-morado);
+    text-decoration: underline;
+}
+
+/* DISEÑO DE LAS VISTAS  */
+.contenido-tema {
+    background-color: var(--fondo-tarjetas);
+    border: 1px solid var(--bordes);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+}
+
+/*  ACORDEÓN TÉCNICO */
+.item-acordeon {
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--bordes);
+}
+
+.acordeon button {
+    background-color: #1a1e26;
+    color: var(--texto-brillante);
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.acordeon button:hover {
+    background-color: #222832;
+    color: var(--neon-morado);
+}
+
+.acordeon .panel {
+    background-color: #11141a;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    border-top: 1px solid var(--bordes);
+}
+
+/* FORMULARIOS TÉCNICOS INTEGRADOS */
+.formulario-seccion {
+    background-color: var(--fondo-tarjetas);
+    border: 1px solid var(--bordes);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+.campo input, .campo select, .campo textarea {
+    background-color: #090a0d;
+    color: var(--texto-brillante);
+    border: 2px solid var(--bordes);
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    border-color: var(--neon-azul);
+}
+
+form button[type="submit"] {
+    background: linear-gradient(90deg, var(--neon-morado), var(--neon-azul));
+    color: white;
+    border: none;
+    padding: 1.1rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 48px;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+
+form button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* PIE DE PÁGINA  */
+footer {
+    background-color: #090a0d;
+    border-top: 1px solid var(--bordes);
+    color: var(--texto-mutado);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 6rem;
+    font-size: 0.9rem;
+}
+.item-acordeon h3 {
+    padding: 1rem;
+    background-color: #1a1e26;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.item-acordeon h3:hover {
+    color: #3a86ff; 
+}
+
+
+/* 3. DISEÑO ADAPTABLE A ESCRITORIO */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    nav a {
+        padding: 1.1rem 2.5rem;
+    }
+    
+    .tarjetas {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
